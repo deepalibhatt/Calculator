@@ -18,9 +18,8 @@ import javax.swing.JTextField;
 
 public class Gui extends JFrame {
   private JTextField answerfield;
-  private JButton one, two, three, four, five, six, seven, eight, nine, zero ,decimal , neg ,  add, sub, multiply, div, equals, clear, backspace;
-  private JRadioButton on, off;
-  private JLabel  emp1, emp2, emp3, emp4, emp5;
+  private JButton one, two, three, four, five, six, seven, eight, nine, zero ,decimal , neg ,  add, sub, multiply, div, equals, clear, backspace, on, off; 
+  private JLabel  emp1, emp2, emp3, emp4, emp5, emp6, emp7, emp8, emp9, emp10;
   private String num_one, num_two, sanswer;
   private double answer =0.0;
   private JPanel contentPanel;
@@ -60,13 +59,17 @@ public class Gui extends JFrame {
       emp3 = new JLabel("");
       emp4 = new JLabel("");
       emp5 = new JLabel("");
-      on= new JRadioButton("ON");
-      off= new JRadioButton("OFF");
+      emp6 = new JLabel("");
+      emp7 = new JLabel("");
+      emp8 = new JLabel("");
+      emp9 = new JLabel("");
+      emp10 = new JLabel("");
+      on= new JButton("ON");
+      off= new JButton("OFF");
       
       
       
       //DIMENSIONS
-      Dimension dim= new Dimension(75,25);
       answerfield.setPreferredSize(new Dimension(340,100));
       one.setPreferredSize(new Dimension(60,50));
       two.setPreferredSize(new Dimension(60,50));
@@ -94,6 +97,11 @@ public class Gui extends JFrame {
       emp3.setPreferredSize(new Dimension(60,50));
       emp4.setPreferredSize(new Dimension(50,50));
       emp5.setPreferredSize(new Dimension(50,50));
+      emp6.setPreferredSize(new Dimension(10,10));
+      emp7.setPreferredSize(new Dimension(10,10));
+      emp8.setPreferredSize(new Dimension(10,10));
+      emp9.setPreferredSize(new Dimension(10,10));
+      emp10 .setPreferredSize(new Dimension(10,10));
       
       Numbers n = new Numbers();
       Calc c = new Calc();
@@ -116,18 +124,18 @@ public class Gui extends JFrame {
       contentPanel.setBackground(Color.getHSBColor(6, 90, 293));
       contentPanel.setLayout(new FlowLayout());
       contentPanel.add(answerfield, BorderLayout.NORTH);
-      contentPanel.add(emp4);contentPanel.add(emp5);contentPanel.add(clear);contentPanel.add(on);contentPanel.add(off);
-      contentPanel.add(seven);contentPanel.add(eight);contentPanel.add(nine);contentPanel.add(add);contentPanel.add(sub);
-      contentPanel.add(four);contentPanel.add(five);contentPanel.add(six);contentPanel.add(multiply);contentPanel.add(div);
-      contentPanel.add(one);contentPanel.add(two);contentPanel.add(three);contentPanel.add(emp1);contentPanel.add(emp2);
-      contentPanel.add(zero);contentPanel.add(decimal);contentPanel.add(emp3);contentPanel.add(backspace); contentPanel.add(equals);
+      contentPanel.add(emp4);contentPanel.add(emp5);contentPanel.add(clear);contentPanel.add(emp10);contentPanel.add(on);contentPanel.add(off);
+      contentPanel.add(seven);contentPanel.add(emp6);contentPanel.add(eight);contentPanel.add(nine);contentPanel.add(emp9);contentPanel.add(add);contentPanel.add(sub);
+      contentPanel.add(four);contentPanel.add(five);contentPanel.add(six);contentPanel.add(emp6);contentPanel.add(multiply);contentPanel.add(div);
+      contentPanel.add(one);contentPanel.add(two);contentPanel.add(three);contentPanel.add(emp7);contentPanel.add(emp1);contentPanel.add(emp2);
+      contentPanel.add(zero);contentPanel.add(decimal);contentPanel.add(emp8);contentPanel.add(emp3);contentPanel.add(backspace); contentPanel.add(equals);
       this.setContentPane(contentPanel);
         
       //NUMBERS
   }
 
     void setJFieldSize(int i, int i0) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet.");
     }
   private class Numbers implements ActionListener{
      public void actionPerformed(ActionEvent event){
